@@ -50,8 +50,7 @@ export const getUsuario = async (req, res) => {
     }
   };
 
-
-  export const postProductos = async (req, res) => {
+export const postProductos = async (req, res) => {
  try {
  const { name, description, price_cost, price_sale, quantity, image } = req.body;
  // 1. Consultamos el último ID en la base de datos
@@ -76,6 +75,7 @@ fotografia) VALUES (?, ?, ?, ?, ?, ?, ?)",
  return res.status(500).json({ message: 'Algo salió mal' });
  }
 };
+
 
   export const putProductos = async (req, res) => {
     try {
